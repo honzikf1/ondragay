@@ -1,0 +1,510 @@
+/* 🌈 RAINBOW POWER 🌈 */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #ff0080 0%,
+    #ff8c00 10%,
+    #ffd700 20%,
+    #00ff00 30%,
+    #00bfff 40%,
+    #8a2be2 50%,
+    #ff1493 60%,
+    #ff8c00 70%,
+    #ffd700 80%,
+    #00ff00 90%,
+    #ff0080 100%
+  );
+  background-size: 400% 400%;
+  animation: rainbowFlow 15s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes rainbowFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ SPARKLES ✨ */
+.sparkle {
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  animation: sparkleFloat 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes sparkleFloat {
+  0% {
+    transform: translate(0, 0) scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -100px) scale(2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 🏳️‍🌈 HERO SECTION 🏳️‍🌈 */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 2rem;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 5px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #ffd700, #00ff00, #00bfff, #8a2be2);
+  border-radius: 30px;
+  z-index: -1;
+  animation: rotateBorder 3s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes rotateBorder {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.rainbow-flag {
+  font-size: 5rem;
+  animation: wave 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 1rem 0;
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #ffd700, #00ff00, #00bfff, #8a2be2);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 3s ease infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes rainbowText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glitter {
+  display: inline-block;
+  animation: spin 2s linear infinite, pulse 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  color: #ff1493;
+  font-weight: 700;
+  margin: 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #333;
+  max-width: 800px;
+  margin: 1.5rem auto;
+  line-height: 1.6;
+}
+
+.tagline em {
+  font-style: normal;
+  font-weight: 900;
+  background: linear-gradient(45deg, #ff0080, #8a2be2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 192, 203, 0.3);
+  border-radius: 20px;
+  border: 3px solid rgba(255, 20, 147, 0.5);
+}
+
+.intro-text p {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.8;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.intro-text p:first-child {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ff1493;
+}
+
+.pride-hearts {
+  font-size: 2rem;
+  margin: 2rem 0;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* 💎 SERVICES SECTION 💎 */
+.services {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.rainbow-text {
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #ffd700, #00ff00, #00bfff, #8a2be2);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 3s ease infinite;
+  font-weight: 900;
+  filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.5));
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #ffd700, #00ff00, #00bfff, #8a2be2);
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  color: #ff1493;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 👑 ABOUT SECTION 👑 */
+.about {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.about-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 💬 TESTIMONIALS 💬 */
+.testimonials {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border-left: 5px solid #ff1493;
+}
+
+.testimonial:hover {
+  transform: translateX(10px);
+  border-left-width: 10px;
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial-author {
+  display: block;
+  font-weight: 700;
+  color: #8a2be2;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+/* 📞 CONTACT SECTION 📞 */
+.contact {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.contact-text strong {
+  color: #ff1493;
+  font-size: 1.5rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.contact-item a {
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #ff1493;
+  transform: scale(1.1);
+}
+
+.cta-button {
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #ffd700, #00ff00, #00bfff, #8a2be2);
+  background-size: 200% 200%;
+  animation: rainbowFlow 3s ease infinite;
+  color: white;
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cta-button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button:active {
+  transform: scale(0.95);
+}
+
+/* 🏳️‍🌈 FOOTER 🏳️‍🌈 */
+.footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.footer-small {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* 📱 RESPONSIVE 📱 */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service-grid,
+  .about-content,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .contact-content {
+    padding: 2rem 1rem;
+  }
+}

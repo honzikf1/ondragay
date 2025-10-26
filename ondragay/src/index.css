@@ -1,0 +1,46 @@
+/* 🌈 GLOBAL RAINBOW STYLES 🌈 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Comic Sans MS', 'Segoe UI Emoji', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: linear-gradient(45deg, #ff0080, #8a2be2);
+  color: white;
+}
+
+::-moz-selection {
+  background: linear-gradient(45deg, #ff0080, #8a2be2);
+  color: white;
+}
