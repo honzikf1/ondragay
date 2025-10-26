@@ -1,4 +1,7 @@
 {
+  "buildCommand": "cd ondragay && npm install && npm run build",
+  "outputDirectory": "ondragay/dist",
+  "installCommand": "cd ondragay && npm install",
   "rewrites": [
     {
       "source": "/(.*)",
